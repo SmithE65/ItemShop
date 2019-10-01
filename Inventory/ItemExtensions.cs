@@ -17,9 +17,9 @@ namespace StoreInventory
                         item.DecrementSellIn();
                         if (item.SellIn < 0)
                             item.Quality = 0; // Worth zero after the show
-                        else if (item.SellIn <= 5)
+                        else if (item.SellIn < 5)
                             item.DegradeQuality(-3); // Increases by 3 each day w/in 5 days of show
-                        else if (item.SellIn <= 10)
+                        else if (item.SellIn < 10)
                             item.DegradeQuality(-2); // Increases by 2 each day w/in 10 days of show
                         else
                             item.DegradeQuality(-1);
